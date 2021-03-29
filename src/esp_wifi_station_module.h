@@ -28,8 +28,17 @@ void init_module_station(esp_wifi_station_module* mod, char* ssid, char* passwor
     strcpy((char*)(mod->esp.ssid), ssid);
     strcpy((char*)(mod->esp.password), password);
     wifi_station_set_config_current(&(mod->esp));
-    wifi_station_connect();
 }
+
+
+/**
+  * @brief  Make connection with AP
+  *
+  * @param     void
+  *
+  * @return    void
+  */
+void connect_to_ap(void) {wifi_station_connect();}
 
 
 /**

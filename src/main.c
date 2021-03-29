@@ -54,7 +54,7 @@ void task_blink(void* ignore)
 
     esp_wifi_station_module mod;
     init_module_station( &mod, ap_name, ap_password);
-
+    connect_to_ap();
     while(true) {}
 
 
